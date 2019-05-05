@@ -1,0 +1,39 @@
+body,
+html {
+    overflow: hidden;
+}
+
+.brand_extra {
+    font-size: 10px;
+    vertical-align: sub;
+}
+
+.area {
+    width: 100%;
+    padding: 1%;
+    overflow: hidden;
+}
+
+.code {
+    margin-left: 2%;
+    border-left: 2px solid;
+    border-color: rgba(209, 208, 208, 0.568);
+    height: 500px;
+    width: 100%;
+    max-height: 100%;
+}
+
+#code1 {
+    margin: 4%;
+    background-color: rgba(224, 214, 214, 0.74);
+    width: 400px;
+    height: 500px;
+    overflow: auto;
+    padding: 5%;
+}
+
+#output-window {
+    height: 215px;
+    background-color: rgba(240, 236, 236, 0.74);
+    padding: 2%;
+}

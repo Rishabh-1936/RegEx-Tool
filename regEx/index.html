@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>regularExp</title>
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-static-top navbar-inverse">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+                <a class="navbar-brand" href="#">regularExp<span class="brand_extra">001</span></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">About</a></li>
+                    <li><a href="./example/index.html">Example</a></li>
+                    <li><a href="./tutorial/tutorial.html">Tutorial</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Flavor<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">JavaScript</a></li>
+                            <li><a href="#">Java</a></li>
+                            <li><a href="#">Python</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="expression">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h3><span class="label label-default">Regular Expression</span></h3>
+                        </div>
+                        <div class="col-md-3" style="margin-top:25px;text-align: right;margin-right: -5px;">
+                            <select id="flag">
+                               <option name="global" value="g">global</option>
+                               <option name="insensitive" value="i">insensitive</option>
+                               <option name="multi-line" value="m">multi-line</option>
+                               
+                            </select>
+                        </div>
+                    </div>
+                    <textarea rows="2" class="area" id="textarea" placeholder="Do not enclose expression in  / /  and select the flag..."></textarea>
+                </div>
+                <hr>
+                <div class="result">
+                    <h3><span class="label label-default">Test String</span>
+                    </h3>
+                    <input type="textarea" value="" placeholder="String" rows="100" class="area" id="test_string">
+                    <div class="area output-window">
+                        <h3><span id="output-heading" class="label label-success"></span></h3>
+                        <p id="output-window"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-3 code">
+                <h3 style="margin:3%"><span class="label label-primary">Code</span></h3>
+                <div id="code1">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./validation.js" type="text/JavaScript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+
+</html>

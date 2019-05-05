@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>RegEx Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-static-top navbar-inverse">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                <a class="navbar-brand" href="#">regularExp<span class="brand_extra">001</span></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">About</a></li>
+                    <!-- <li><a href="./index.html">Practice</a></li> -->
+                    <li id="pattern_button"><a href="#pattern">Pattern Sinppet</a></li>
+                    <li><a href="#">Tutorial</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1>New User Signup</h1>
+    <form>
+
+        <div class="group">
+            <input type="text" class="form-control" name="username" placeholder="username">
+            <p>Username must be and contain 5 - 12 characters</p>
+        </div>
+
+        <div class="group">
+            <input type="text" class="form-control" name="email" placeholder="email">
+            <p>Email must be a valid address, e.g. me@mydomain.com</p>
+        </div>
+
+        <div class="group">
+            <input type="password" class="form-control" name="password" placeholder="password">
+            <p>Password must alphanumeric (@, _ and - are also allowed) and be 8 - 20 characters</p>
+        </div>
+
+        <div class="group">
+            <input type="text" class="form-control" name="telephone" placeholder="telephone">
+            <p>Telephone must be a valid UK telephone number (11 digits)</p>
+        </div>
+
+        <div class="group">
+            <input type="text" class="form-control" name="slug" placeholder="profile slug">
+            <p>Slug must contain only lowercase letters, numbers and hyphens and be 8 - 20 characters</p>
+        </div>
+
+    </form>
+    <div id="pattern">
+        <ul>
+            <li>Telephone : &nbsp;/^\d{11}$/</li>
+            <li>Username : &nbsp;/^[a-z\d]{5,12}$/i</li>
+            <li>Password : &nbsp;/^[\d\w@-]{8,20}$/i</li>
+            <li>Slug &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: &nbsp;/^[a-z\d-]{8,20}$/</li>
+            <li>Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: &nbsp;/^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/</li>
+        </ul>
+    </div>
+    <!-- 
+    <form>
+        <div class="input-group">
+            <span class="input-group-addon glyphicon glyphicon-user" aria-hidden="true"></span>
+            <input type="text" name="username" class="form-control" placeholder="username" aria-describedby="basic-addon1">
+        </div>
+        <p>Username must be and contain 5 - 12 characters</p>
+
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">@</span>
+            <input type="text" class="form-control" name="email" placeholder="email" aria-describedby="basic-addon2">
+        </div>
+        <p>Email must be a valid address, e.g. me@mydomain.com</p>
+
+        <div class="input-group">
+            <span class="input-group-addon glyphicon glyphicon-lock"></span>
+            <input type="text" class="form-control" name="password" placeholder="password" aria-label="Amount (to the nearest dollar)">
+        </div>
+        <p>Password must alphanumeric (@, _ and - are also allowed) and be 8 - 20 characters</p>
+
+        <div class="input-group">
+            <span class="input-group-addon glyphicon glyphicon-earphone" id="basic-addon1"></span>
+            <input type="text" name="telephone" placeholder="telephone" class="form-control">
+        </div>
+        <p>Telephone must be a valid UK telephone number (11 digits)</p>
+
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">#</span>
+            <input type="text" name="slug" placeholder="profile slug" class="form-control">
+        </div>
+        <p>Slug must contain only lowercase letters, numbers and hyphens and be 8 - 20 characters</p>
+
+    </form>
+ -->
+    <script type="text/javascript" src="validation.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
